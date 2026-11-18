@@ -94,8 +94,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 }
 
 .botão {
@@ -153,101 +152,153 @@ h1 {
     object-fit: contain;
 }
 
-@media (min-width: 768px) {
 
-    .hero-card {
-        flex-direction: row;
-    }
 
-    .hero-content {
-        flex: 1;
-    }
 
-    .game-ilustração {
-        flex: 0 1 40%;
-    }
-}
-
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     body {
         padding: 12px;
     }
 
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
     .hero-card {
+        width: 100%;
+        min-height: auto;
+
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: flex-start;
 
         padding: 28px 22px;
-        gap: 35px;
+        gap: 25px;
 
-        min-height: auto;
+        border-radius: 18px;
     }
 
     .hero-content {
         width: 100%;
         max-width: 100%;
-    }
 
-    h1 {
-        font-size: clamp(30px, 8vw, 38px);
-    }
-
-    .descrição {
-        font-size: 16px;
-        line-height: 1.8;
+        text-align: center;
     }
 
     .badge-top {
+        display: inline-flex;
+
         font-size: 12px;
-        padding: 9px 13px;
+        padding: 8px 13px;
+
+        margin-bottom: 18px;
+    }
+
+    h1 {
+        font-size: 26px;
+        line-height: 1.2;
+
+        margin-bottom: 12px;
+    }
+
+    .descrição {
+        font-size: 15px;
+        line-height: 1.6;
+
+        max-width: 100%;
+
+        margin-bottom: 20px;
     }
 
     .botões {
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: center;
+        align-items: center;
+
         gap: 8px;
+        margin-bottom: 24px;
     }
 
     .botão {
-        font-size: 13px;
-        padding: 9px 11px;
+        font-size: 12px;
+
+        padding: 8px 11px;
+
+        border-radius: 8px;
     }
 
     .botão-play {
-        width: 50%;
-        padding: 18px;
-        font-size: 18px;
+        display: flex;
+
+        width: 100%;
+
+        justify-content: center;
+        align-items: center;
+
+        padding: 15px 10px;
+
+        font-size: 16px;
+        border-radius: 10px;
     }
 
     .game-ilustração {
+        display: flex;
+
         width: 100%;
-        align-self: center;
+
+        justify-content: center;
+        align-items: center;
     }
 
     .game-ilustração img {
-        width: 100%;
-        max-width: 320px;
+        display: block;
+
+        width: 170px;
+        max-width: 100%;
         height: auto;
+
+        object-fit: contain;
     }
 }
 
+
+
+
 @media (max-width: 380px) {
+
+    body {
+        padding: 10px;
+    }
 
     .hero-card {
         padding: 22px 16px;
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 24px;
+    }
+
+    .descrição {
+        font-size: 14px;
     }
 
     .botão {
-        font-size: 12px;
-        padding: 8px 10px;
+        font-size: 11px;
+        padding: 8px 9px;
     }
-}
 
+    .botão-play {
+        font-size: 15px;
+    }
 
-img {
-    max-width: 100%;
-    height: auto;
+    .game-ilustração img {
+        width: 150px;
+    }
+
 }
